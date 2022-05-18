@@ -10,6 +10,37 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
  */
+
+ @import "bulma";
+ .notification:not(:last-child) {
+   margin-bottom: 0;
+ }
+ 
+ .profile_image {
+   border-radius: 50%;
+ }
+ 
+ .main-image {
+   height: 400px;
+   background-image: url(programing.png);
+   background-repeat: none;
+   background-size: contain;
+ }
+ .comments-index {
+   background-color: #fff;
+   border: 1px #000 solid;
+ }
+ .comments-delete {
+   margin-left: auto;
+ }
+ .like-btn {
+   font-size: 15px;
+   color: #808080;
+ }
+ 
+ .unlike-btn {
+   font-size: 15px;
+   color: #e54747;
+ }
