@@ -8,7 +8,6 @@ class Product < ApplicationRecord
         validates :content
         validates :tech
         validates :span
-        validates :image
         validates :commitment
     end
 end
