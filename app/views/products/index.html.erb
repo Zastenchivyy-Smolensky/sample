@@ -21,6 +21,9 @@
                             <% end %>
                             </figure>
                         </div>
+                        <div id="favorite_buttons_<%= product.id%>">
+                            <%= render 'favorites/favorite', product: product %>
+                        </div>
 
                         <div class="media-content">
                             <div class="media">
