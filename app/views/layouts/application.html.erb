@@ -9,7 +9,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%=  javascript_include_tag 'application', data: { 'turbo-track' => 'reload' } %>
     <%= javascript_importmap_tags %>
     <script src="/js/custom.js"></script>
   </head>
@@ -51,7 +50,7 @@
           <%= link_to 'マイページ', user_path(current_user), class: "navbar-item button is-white is-light" %>
         </div>
         <div class="navbar-item">
-          <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "navbar-item button is-white is-light" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "navbar-item button is-white is-light" %>
         </div>
       </div>
       <% else %>
