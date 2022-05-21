@@ -69,7 +69,9 @@
 
 
                 </table>
-
+                 <div id="favorite_buttons_<%= @product.id %>">
+                    <%= render 'favorites/favorite', product: @product %>
+                  </div>
                 <% if @product.user.id == current_user.id %>
                   <%= link_to '編集画面', edit_product_path(@product), class:"button is-success" %>
                 <% end %>
@@ -99,6 +101,8 @@
   </div>
 </section>
 <div class="new-comment">
+  <%= render 'comments/form', product: @product, comment: @comment %>
 </div>
 <div id="comments_area">
+  <%= render 'comments/product_comments', product: @product %>
 </div>
